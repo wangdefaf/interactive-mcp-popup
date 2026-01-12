@@ -21,7 +21,7 @@
 
 1. 克隆项目
 ```bash
-git clone https://github.com/your-username/interactive-mcp-popup.git
+git clone https://github.com/wangdefaf/interactive-mcp-popup.git
 cd interactive-mcp-popup
 ```
 
@@ -61,6 +61,13 @@ uv sync
 ```
 
 ## 使用方法
+
+### 配置规则
+1. 在任何流程、任务、对话进行时，无论是询问、回复、或完成阶段性任务，皆必须调用 MCP interactive-mcp-popup。
+2. 每当收到用户反馈，若反馈内容非空，必须再次调用 MCP interactive-mcp-popup，并根据反馈内容调整行为。
+3. 仅当用户明确表示「结束」或「不再需要交互」时，才可停止调用 MCP interactive-mcp-popup，流程才算结束。
+4. 除非收到结束指令，否则所有步骤都必须重复调用 MCP interactive-mcp-popup。
+5. 完成任务前，必须使用 MCP interactive-mcp-popup 工具向用户询问反馈。
 
 ### 基础弹窗提问
 
@@ -167,7 +174,7 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 如果你遇到问题或有建议，请：
 
 1. 查看 [文档](docs/)
-2. 搜索 [Issues](https://github.com/your-username/interactive-mcp-popup/issues)
+2. 搜索 [Issues](https://github.com/wangdefaf/interactive-mcp-popup/issues)
 3. 创建新的 Issue
 
 ---
